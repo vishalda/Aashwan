@@ -9,6 +9,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        .nav-div{
+            width:100%;
+            height:auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top:1rem;
+            
+        }
+        #navbarSupportedContent{
+            padding-right: 5rem;
+        }
+
+        .nav-item{
+            margin: 0 20px;
+        }
+
+        .navbar-brand{
+            color:black;
+            padding-right: 20px;
+        }
+
+        .navbar-brand:hover{
+            color:black;
+        }
+
+        .nav-link{
+            color: black !important;
+        }
+
+        .nav-link:hover{
+            color:green !important;
+        }
+
+        #nav-div{
+            width:90vw;
+            height:5vh;
+            border-radius: 10px;
+            background-color: white;
+            color: black;
+            box-shadow: -1px 3px 23px -12px rgba(0,0,0,0.75);
+-webkit-box-shadow: -1px 3px 23px -12px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 3px 23px -12px rgba(0,0,0,0.75);
+        }
         .register-page{
             width:100vw;
             height:100vh;
@@ -34,8 +79,11 @@
     </style>
 </head>
 <body>
-    {% include 'navbar.html' %}
+    
     <div class="register-page">
+        <div class="nav-div">
+            {% include 'navbar.html' %}
+        </div>
         <h1>Register</h1>
         <div class="container">
             <form action="" method="POST" enctype="multipart/form-data" class="row g-2">
@@ -81,7 +129,7 @@
                         <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
                         <input type="password" class="form-control" id="exampleInputPassword1" required name="confirm_password">
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-outline-success">Submit</button>
             </form>
         </div>
     </div>

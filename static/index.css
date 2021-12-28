@@ -1,6 +1,17 @@
 .landing-page-header{
-    height:30rem;
+    height:50rem;
     width:100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing-page-box{
+    background-color: white;
+    border-radius: 1rem;
+    height:65%;
+    width:70%;
 }
 
 .create-volunteer-modal{
@@ -14,7 +25,7 @@
 }
 
 .landing-page-content{
-    text-align: center;
+    text-align: left;
 }
 
 .svg-modal{
@@ -22,8 +33,8 @@
     height:100%;
     float:right;
     position: absolute;
-    top: 7rem;
-    right:-20rem;
+    top: 5rem;
+    right:-12rem;
 }
 
 .card-div{
