@@ -1,66 +1,66 @@
-.landing-page-header{
-    height:50rem;
-    width:100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.landing-page-header {
+  height: 50rem;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.landing-page-box{
-    background-color: white;
-    border-radius: 1rem;
-    height:65%;
-    width:70%;
+.landing-page-box {
+  background-color: white;
+  border-radius: 1rem;
+  height: 65%;
+  width: 70%;
 }
 
-.create-volunteer-modal{
-    width:50%;
-    height:100%;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding:0 10rem;
+.create-volunteer-modal {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10rem;
 }
 
-.landing-page-content{
-    text-align: left;
+.landing-page-content {
+  text-align: left;
 }
 
-.svg-modal{
-    width:60%;
-    height:100%;
-    float:right;
-    position: absolute;
-    top: 5rem;
-    right:-12rem;
+.svg-modal {
+  width: 60%;
+  height: 100%;
+  float: right;
+  position: absolute;
+  top: 7rem;
+  right: -12rem;
 }
 
-.card-div{
-    width:100%;
-    height:100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.card-div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.ngo-card-link{
-    color: black;
-    text-decoration: none;
-    padding:0;
-    width:80%;
-    margin-bottom: 2rem;
+.ngo-card-link {
+  color: black;
+  text-decoration: none;
+  padding: 0;
+  width: 80%;
+  margin-bottom: 2rem;
 }
 
-.ngo-card-link :hover{
-    color: black;
-    box-shadow: 0;
+.ngo-card-link :hover {
+  color: black;
+  box-shadow: 0;
 }
 
-.ngo-card{
-    width:100%;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    transition:0.4s;
+.ngo-card {
+  width: 100%;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  transition: 0.4s;
 }

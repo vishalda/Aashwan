@@ -86,9 +86,29 @@
         .btn{
             margin:20px;
         }
+        .top-right-div {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 10rem;
+        height: 10rem;
+        border-bottom-left-radius: 100%;
+        background-color: rgb(7, 179, 7);
+      }
+      .top-left-div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 10rem;
+        height: 10rem;
+        border-bottom-right-radius: 100%;
+        background-color: rgb(7, 179, 7);
+      }
     </style>
 </head>
 <body>
+    <div class="top-left-div"></div>
+    <div class="top-right-div"></div>
     <div class="nav-div">
         {% include 'navbar.html' %}
     </div>
@@ -143,6 +163,7 @@
         </div>
     
     </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#07B307" fill-opacity="1" d="M0,0L60,37.3C120,75,240,149,360,202.7C480,256,600,288,720,298.7C840,309,960,299,1080,256C1200,213,1320,139,1380,101.3L1440,64L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
     
 </body>
 </html>
