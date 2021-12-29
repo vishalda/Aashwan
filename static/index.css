@@ -21,7 +21,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 10rem;
+  padding: 0 8rem;
 }
 
 .landing-page-content {
@@ -34,7 +34,7 @@
   float: right;
   position: absolute;
   top: 7rem;
-  right: -12rem;
+  right: -10rem;
 }
 
 .card-div {
