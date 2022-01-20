@@ -21,7 +21,6 @@ def create_volunteer(request):
             event_id=Event.objects.get(pk=1)
             query='''INSERT INTO volunteer_volunteers (password,username,name,email_id,phone_no,gender,event_id_id,credit) VALUES ('{}','{}','{}','{}','{}','{}','{}','{}');'''.format(password,username,name,email_id,phone_no,gender,1,0)
             cursor.execute(query)
-            #volunteer=Volunteers.objects.raw('''INSERT INTO volunteer_volunteers (name,email_id,phone_no,gender,event_id_id,credit) VALUES ('{}','{}','{}','{}','{}','{}');'''.format(name,email_id,phone_no,gender,0,0))
             return redirect('/')
         else:
             messages.info(request,'Failed')
@@ -38,7 +37,6 @@ def enroll_volunteer(request,eid):
         if data[0][0]==password:
             query='''UPDATE volunteer_volunteers SET event_id_id={} WHERE username='{}';'''.format(eid,username)
             cursor.execute(query)
-            print("Hi")
             return redirect('/')
         messages.info(request,"Failed")
         return redirect('/')
@@ -51,5 +49,4 @@ def user_list(request):
 def assign_cred_points(request,eid,points):
     query='''UPDATE volunteer_volunteers SET credit=credit+{} WHERE event_id_id='{}';'''.format(points,eid)
     cursor.execute(query)
-    #v_list=Volunteers.objects.raw('''SELECT credits FROM volunteer_volunteers WHERE event_id_id='{}';'''.format(eid))
     return redirect('/')

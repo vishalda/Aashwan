@@ -78,9 +78,7 @@ def logout_ngo(request):
     return redirect('/')
 
 def ngo_page(request,nid):
-    #org_data=Organization.objects.get(pk=nid)
     org_data=Organization.objects.raw('''SELECT * FROM ngo_organization WHERE id='{}';'''.format(nid))
-    #eve_data=Event.objects.filter(ngo_id=nid)
     eve_data=Event.objects.raw('''SELECT * FROM event_event WHERE ngo_id_id='{}';'''.format(nid))
     data={'org_data':org_data[0],'eve_data':eve_data}
     return render(request,"ngo.html",data)
