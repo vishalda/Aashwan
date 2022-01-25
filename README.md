@@ -24,10 +24,10 @@ Feel free to open a pull request or use this project.
 
 ## Screenshots
 
-![screenshot1](./media/images/NGO-1.png)
-![screenshot2](./media/images/NGO-2.png)
-![screenshot3](./media/images/NGO-3.png)
-![screenshot4](./media/images/NGO-4.png)
-![screenshot5](./media/images/NGO-5.png)
-![screenshot4](./media/images/NGO-6.png)
-![screenshot5](./media/images/NGO-7.png)
+![screenshot1](./media/images/DBMS1.png)
+![screenshot2](./media/images/DBMS2.png)
+![screenshot3](./media/images/DBMS7.png)
+![screenshot4](./media/images/DBMS6.png)
+![screenshot5](./media/images/DBMS3.png)
+![screenshot4](./media/images/DBMS5.png)
+![screenshot5](./media/images/DBMS8.png)
