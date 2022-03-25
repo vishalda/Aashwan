@@ -47,126 +47,7 @@
               Register as volunteer
             </button>
           </div>
-          <div
-            class="modal fade"
-            id="exampleModal"
-            tabindex="-1"
-            aria-labelledby="exampleModalLabel"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">
-                    Register as Volunteer
-                  </h5>
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="modal-body">
-                  <form
-                    action="/volunteer/create-volunteer/"
-                    method="POST"
-                    enctype="multipart/form-data"
-                  >
-                    {% csrf_token %}
-                    <div class="mb-3">
-                      <label for="nameInput" class="form-label">Name</label>
-                      <input
-                        type="text"
-                        name="name"
-                        class="form-control"
-                        id="nameInput"
-                        required
-                      />
-                    </div>
-                    <div class="mb-3">
-                      <label for="emailInput" class="form-label">Email</label>
-                      <input
-                        type="email"
-                        class="form-control"
-                        id="emailInput"
-                        name="email"
-                        required
-                      />
-                    </div>
-                    <div class="mb-3">
-                      <label for="usernameInput" class="form-label"
-                        >Username</label
-                      >
-                      <input
-                        type="text"
-                        name="username"
-                        class="form-control"
-                        id="usernameInput"
-                        required
-                      />
-                    </div>
-                    <div class="mb-3">
-                      <label for="passwordInput" class="form-label"
-                        >Password</label
-                      >
-                      <input
-                        type="password"
-                        name="password"
-                        class="form-control"
-                        id="passwordInput"
-                        required
-                      />
-                    </div>
-                    <div class="mb-3">
-                      <label for="confirmPasswordInput" class="form-label"
-                        >Confirm Password</label
-                      >
-                      <input
-                        type="password"
-                        name="confirm_password"
-                        class="form-control"
-                        id="confirmPasswordInput"
-                        required
-                      />
-                    </div>
-                    <div class="mb-3">
-                      <label for="phoneInput" class="form-label">Phone</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        name="phone"
-                        id="phoneInput"
-                        required
-                      />
-                    </div>
-                    <div class="mb-3">
-                      <label for="genderInput" class="form-label">Gender</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        name="gender"
-                        id="genderInput"
-                        required
-                      />
-                    </div>
-                    <div class="mb-3">
-                      <button type="submit" class="btn btn-outline-success">
-                        Submit
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-outline-danger"
-                        data-bs-dismiss="modal"
-                      >
-                        Close
-                      </button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
+
           <div class="svg-modal">
             <svg
               data-aos="zoom-in"
@@ -404,6 +285,122 @@
         </div>
       </div>
     </div>
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Register as Volunteer
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form
+              action="/volunteer/create-volunteer/"
+              method="POST"
+              enctype="multipart/form-data"
+            >
+              {% csrf_token %}
+              <div class="mb-3">
+                <label for="nameInput" class="form-label">Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  class="form-control"
+                  id="nameInput"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="emailInput" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="emailInput"
+                  name="email"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="usernameInput" class="form-label">Username</label>
+                <input
+                  type="text"
+                  name="username"
+                  class="form-control"
+                  id="usernameInput"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="passwordInput" class="form-label">Password</label>
+                <input
+                  type="password"
+                  name="password"
+                  class="form-control"
+                  id="passwordInput"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="confirmPasswordInput" class="form-label"
+                  >Confirm Password</label
+                >
+                <input
+                  type="password"
+                  name="confirm_password"
+                  class="form-control"
+                  id="confirmPasswordInput"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="phoneInput" class="form-label">Phone</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="phone"
+                  id="phoneInput"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="genderInput" class="form-label">Gender</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="gender"
+                  id="genderInput"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <button type="submit" class="btn btn-outline-success">
+                  Submit
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-danger"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <hr />
     <br /><br />
     <div class="card-div">
@@ -455,8 +452,8 @@
       });
     </script>
     <script>
-      var myModal = document.getElementById("myModal");
-      var myInput = document.getElementById("myInput");
+      var myModal = document.getElementById("exampleModal");
+      var myInput = document.getElementById("nameInput");
 
       myModal.addEventListener("shown.bs.modal", function () {
         myInput.focus();
