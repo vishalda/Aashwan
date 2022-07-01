@@ -4,6 +4,10 @@ from volunteer.models import Volunteers
 from django.db import connection
 from event.models import Event
 from django.contrib import messages
+import os, openpyxl
+
+book=openpyxl.Workbook()
+sheet=book.active
 
 # Create your views here.
 cursor=connection.cursor()
@@ -21,10 +25,22 @@ def create_volunteer(request):
             event_id=Event.objects.get(pk=1)
             query='''INSERT INTO volunteer_volunteers (password,username,name,email_id,phone_no,gender,event_id_id,credit) VALUES ('{}','{}','{}','{}','{}','{}','{}','{}');'''.format(password,username,name,email_id,phone_no,gender,1,0)
             cursor.execute(query)
-            return redirect('/')
         else:
             messages.info(request,'Failed')
             return redirect('/')
+        query='''SELECT * FROM volunteer_volunteers;'''
+        cursor.execute(query)
+        results=cursor.fetchall()
+        i=0
+        for row in results:
+            i += 1
+            j = 1
+            for col in row:
+                cell = sheet.cell(row = i, column = j)
+                cell.value = col
+                j += 1
+        book.save("Volunteer.ods")
+        return redirect('/')
 
 def enroll_volunteer(request,eid):
     if(request.method=="POST"):

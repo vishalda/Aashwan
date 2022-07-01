@@ -3,10 +3,14 @@ from django.contrib.auth.models import auth
 from django.contrib import messages
 from django.views.decorators.csrf import csrf_exempt
 from django.db import connection
-
 from event.models import Event
 from .models import *
+import os, openpyxl
 
+book=openpyxl.Workbook()
+sheet=book.active
+
+cursor=connection.cursor()
 # Create your views here.
 @csrf_exempt
 def index(request):
@@ -40,7 +44,6 @@ def register_ngo(request):
             if(len(orgi)>0):
             #elif Organization.objects.filter(email=email).exists():
                 #return JsonResponse({'Login':'Email taken'})
-                print("JAIII")
                 messages.info(request,'Email Taken')
                 return redirect('/register-ngo/')
             else:
@@ -48,6 +51,18 @@ def register_ngo(request):
                 user=Organization.objects.create_user(username=username,password=password,email=email,name=name,location=location,phone=phone,description=description,links=links,logo=logo)
                 user.save()
                 messages.info(request,'Success')
+                query='''SELECT * FROM ngo_organization;'''
+                cursor.execute(query)
+                results=cursor.fetchall()
+                i=0
+                for row in results:
+                    i += 1
+                    j = 1
+                    for col in row:
+                        cell = sheet.cell(row = i, column = j)
+                        cell.value = col
+                        j += 1
+                book.save("NGO.ods")
                 return redirect('/login-ngo/')
         else:
             messages.info(request,'Password does not match')
