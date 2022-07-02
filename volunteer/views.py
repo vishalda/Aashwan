@@ -53,6 +53,18 @@ def enroll_volunteer(request,eid):
         if data[0][0]==password:
             query='''UPDATE volunteer_volunteers SET event_id_id={} WHERE username='{}';'''.format(eid,username)
             cursor.execute(query)
+            query='''SELECT * FROM volunteer_volunteers;'''
+            cursor.execute(query)
+            results=cursor.fetchall()
+            i=0
+            for row in results:
+                i += 1
+                j = 1
+                for col in row:
+                    cell = sheet.cell(row = i, column = j)
+                    cell.value = col
+                    j += 1
+            book.save("Volunteer.ods")
             return redirect('/')
         messages.info(request,"Failed")
         return redirect('/')
@@ -65,4 +77,16 @@ def user_list(request):
 def assign_cred_points(request,eid,points):
     query='''UPDATE volunteer_volunteers SET credit=credit+{} WHERE event_id_id='{}';'''.format(points,eid)
     cursor.execute(query)
+    query='''SELECT * FROM volunteer_volunteers;'''
+    cursor.execute(query)
+    results=cursor.fetchall()
+    i=0
+    for row in results:
+        i += 1
+        j = 1
+        for col in row:
+            cell = sheet.cell(row = i, column = j)
+            cell.value = col
+            j += 1
+    book.save("Volunteer.ods")
     return redirect('/')
